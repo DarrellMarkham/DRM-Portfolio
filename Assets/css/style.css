@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #dfded7;
-  --secondary-color: #024e76;
-  --tertiary-color: #39a6b2;
+  --primary-color: #e3d1bc;
+  --secondary-color: #522123;
+  --tertiary-color: 4b371e;
   --hover-color: white;
-  --home-color: black;
+  --home-color: #171108;
 }
 
 * 
@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif, Georgia, Times;
 }
 
 /* HEADER AND NAVIGATION BAR STYLES START */
@@ -24,60 +24,53 @@ header {
   justify-content: space-between;
   align-items: center;
   background-image: url("../images/header.JPG");
+  background-image: op;
   background-size: cover;
   background-attachment: fixed;
   background-position: 80%;
   z-index: 99;
 }
 
-header div {
-  width: 80%;
-  position: sticky;
-  top: 0;
-}
-
-header div ul li {
-  display: flex;
-  flex-direction: column;
-}
-
-header div ul li a {
-  padding: 10px 15px;
-  font-weight: lighter;
-  font-size: 1vw;
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-header div ul li :hover {
-  font-style: italic;
-  color: var(--hover-color);
-  text-shadow: none;
-}
-
 header nav {
-  padding: none;
-  margin: 0;
-}
+  display: flex;
+  width: 100%;
+  }
 
 header nav img {
   width: 25%;
   border-radius: 50%;
 }
 
-header nav .navbar-container {
-  width: 100%;
+header nav .navbar-left {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: right;
+  width: 100%;
+
+  }
+
+header nav .navbar-left ul li {
+  display: flex;
+  flex-direction: column;
 }
+
+header nav .navbar-left ul li a {
+  padding: 10px 15px;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
 header nav .navbar-middle {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: right;
+}
+
+header nav .navbar-middle p{
+  font-family: Georgia;
+  font-style: italic;
+  color: var(--hover-color);
+  text-shadow: none;
 }
 
 Header nav .navbar-right {
@@ -95,8 +88,6 @@ header nav .navbar-right ul {
 
 header nav .navbar-right ul li a {
   padding: 10px 15px;
-  font-weight: lighter;
-  font-size: 1vw;
   color: var(--primary-color);
   text-decoration: none;
 }
@@ -105,6 +96,7 @@ header nav ul li a:hover {
   font-style: italic;
   color: var(--hover-color);
   text-shadow: none;
+  font-size: 1.3vw;
 }
 /* HEADER AND NAVIGATION BAR STYLES END */
 
@@ -142,11 +134,12 @@ section {
 .home {
   padding: 20px 65px;  
   position: sticky;
-  top: 20px;
+  top: 0px;
+  background-color: #f4ede4;
   }
 
 .home a {
-  font-weight: lighter;
+  font-weight: bold;
   font-size: 1vw;
   color: var(--home-color);
   text-decoration: none;
@@ -156,21 +149,26 @@ section {
   font-style: italic;
   color: var(--home-color);
   text-shadow: none;
+  font-size: 1.4vw;
 }
 
 /* HERO STYLES START */
 .hero {
   background-image: url('../images/header.jpg');
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
   background-attachment: fixed;
   background-position: 80%;
-  height: 750px;
 }
 
 .hero-container {
   padding: 10px 15px;
   display: flex;
-  height: 650px;
+  height: 550px;
+  width: 100%;
 }
 .hero-container h2 {
   font-style: italic;
@@ -183,7 +181,7 @@ section {
   width: 100%;
   display: flex;
   justify-content: left;
-  margin-bottom: auto;
+  margin-top: 100px;
 }
 
 .hero-middle  {
@@ -195,6 +193,7 @@ section {
 
 .hero-right  {
   width: 100%;
+  height: 100px;
   display: flex;
   justify-content: right;
   margin-top: auto;
@@ -218,75 +217,78 @@ section {
 }
 
 .secondary-border {
-  border-color: var(--tertiary-color);
+  border-color: var(--secondary-color);
 }
 /* SECTION TITLE STYLES END */
 
-/* WHAT WE DO STYLES */
-
+/* BIO SECTION START */
+.intro {
+  background-color: #f4ede4;
+}
 .intro p {
   line-height: 1.7;
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
   width: 80%;
-  height: 600px;
+  height: 500px;
   margin: 0 auto;
   font-size: 20px;
-  text-align: center;}
-/* WHAT WE DO STYLES END */
+  text-align: center;
+}
+/* BIO SECTION END */
 
-
-/* WHAT YOU DO STYLES START */
-.steps { 
-  background: var(--primary-color);
+/* PORTFOLIO */
+.jobs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #ede1d3;
+  padding: 25px;
 }
 
-.step {
+.job {
   margin: 50px auto;
   padding-bottom: 50px;
   width: 80%;
-  border-bottom: 1px solid var(--tertiary-color);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
+  }
 
-.step:last-child {
+.job:last-child {
   border-bottom: none;
 }
 
-.step h3 {
-  color: var(--secondary-color);
-  font-size: 46px;
-  flex: 1 30%;
+.job h3 {
+  font-size: 26px;
+  flex: 1 5%;
+  border: none;
+  color: (--tertiary-color);
 }
 
-.step-info {
+.job-info {
   flex: 2 70%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.step-img {
-  flex: 1 12%;
+.job-img {
+  flex: 1 5%;
   margin-right: 20px;
 }
 
-.step-img img {
+.job-img img {
   max-width: 100%;
 }
 
-.step-text {
+.job-text {
   flex: 12;
 }
 
-.step-text p {
+.job-text p {
   color: var(--tertiary-color);
   font-size: 18px;
 }
 
-.step-text h4 {
+.job-text h4 {
   font-size: 26px;
   line-height: 1.5;
   color: var(--secondary-color);
