@@ -5,12 +5,12 @@
   --home-color: #171108;
 }
 
-* 
-{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*
+  {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
 body {
   font-family: Helvetica, Arial, sans-serif, Georgia, Times;
@@ -175,7 +175,7 @@ footer a {
 
 /* HOME SECTION START */
 section {
-  padding: 0  50px;
+  padding: 50px;
 }
 
 .home {
@@ -239,43 +239,42 @@ section {
 /* PORTFOLIO SECTION START */
 .jobs {
   background-color: #ede1d3;
-  padding-top: 50px;
-  padding-bottom: 200px;
-}
-
-.flex-job {
   display: flex;
-  margin: auto 350px;
-  flex-wrap: wrap;
-  padding-bottom: 35px;
+  flex-direction: column;
 }
 
-.flex-job> * {
-  flex: 1 1 160px;
+.jobs> * {
+  flex: 1 1 150px;
+  flex-wrap: wrap;
+}
+
+.flex-row {
+  display: flex;
+  margin: 15px 50px;
+}
+
+.job-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .job {
-  margin: 5px;
+  margin: 0 135px;
   padding: 5px 20px 0;
-  width: 80%;
   border-style: solid;
   border-color: var(--secondary-color);
-  flex: 1 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .job h3 {
   font-size: 26px;
-  flex: 1 50%;
+  margin: 0 130px;
 }
 
-.job-img {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.job-img img {
-  max-width: 100%;
+.job img {
+  margin: 0 200px;
 }
 /* PORTFOLIO SECTION END */
 
@@ -290,7 +289,6 @@ section {
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-  margin: auto 50px;
   text-align: center;
 }
 
@@ -298,8 +296,6 @@ section {
   color: var(--primary-color);
   font-size: 48px;
   text-align: center;
-  padding-top: 100px;
-  padding-bottom: 30px;
   font-style: italic;
   font-family: Georgia;
 }
@@ -327,10 +323,7 @@ section {
 /* CONTACT ME STYLES END */
 
 /* UTILITIES */
-.flex-row {
-  display: flex;
-  margin: auto 50px;
-}
+
 
 /* MEDIA QUERY FOR SMALL SCREENS */
 @media screen and (max-width: 980px) {
@@ -382,6 +375,7 @@ section {
     text-shadow: none;
     font-size: 50px;  
   }
+}
 
 /* MEDIA QUERY FOR TABLETS */
 @media screen and (max-width: 768px) {
@@ -410,11 +404,11 @@ section {
   .job-text {
     flex: 100%;  
   }
-}
 
+  
 /* MEDIA QUERY FOR MOBILE PHONES */
-@media screen and (max-width: 575px) {
-  .section-title {
+@media screen and (max-width: 575px) { }
+.section-title {
     width: 95%;
   }
 
