@@ -325,12 +325,12 @@ footer a {
 }
 
 .contact-info address a {
-  color: var(--hover-color);S
+  color: var(--hover-color);
 }
 /* CONTACT ME STYLES END */
 
 /* MEDIA QUERY FOR SMALL SCREENS */ 
-@media screen and max-width: 980px; {
+@media screen and (max-width: 980px) {
   header {
     padding-bottom: 0;
     justify-content: center;
