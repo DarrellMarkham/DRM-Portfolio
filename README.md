@@ -12,3 +12,7 @@ https://darrellmarkham.github.io/DRM-Portfolio/
 
 ## Contribution
 Darrell Markham
+
+## Comments
+Extremely difficult yet greatly rewarding when you finally 
+have everything working the way you want. 
