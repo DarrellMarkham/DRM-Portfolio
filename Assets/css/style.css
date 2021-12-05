@@ -374,7 +374,7 @@ footer a {
   
   .home a {
     font-weight: bold;
-    font-size: 40px;
+    font-size: 20px;
     color: var(--home-color);
     text-decoration: none;
   }
@@ -383,23 +383,30 @@ footer a {
     font-style: italic;
     color: var(--home-color);
     text-shadow: none;
-    font-size: 50px;  
+    font-size: 25px;  
   }
 
-  .jobs-main {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 15px 0 25px;
+  .job:first-child {
+    flex: 1 1 60%;
+    flex-direction: column;
   }
 
   .job h3 {
-    font-size: 26px;
-    width: 25%;
+  font-size: 26px;
+  width: 25%;
   }
 
   .job img {
     margin: 0 40px;
     width: 80%;
+  }
+
+  .job p {
+    line-height: 1.2;
+    color: var(--secondary-color);
+    font-size: 16px;
+    text-align: justify;
+    align-self: center;
   }
 }
 
@@ -409,16 +416,36 @@ footer a {
     padding: 10px 10px;
   }
 
-  .jobs-main {
-    display: flex;
+  .bio {
+    padding: 10px 25px 25px;
+    background-color: #f4ede4;  
+    }
+  
+  .bio p {
+    line-height: 1.2;
+    color: var(--secondary-color);
+    width: 80%;
+    margin: 10px auto;
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .jobs-container {
+    display: flex;  
     flex-wrap: wrap;
-    margin: 0 10px 0 10px;
+    padding: 20px 50px;
+    background-color: #EDE1D3;
   }
 
-  .job h3 {
-    font-size: 20px;;
+  .section-title {
+    font-size: 40px;
+    color: var(--secondary-color);
+    text-align: left;
+    margin: auto auto auto 50px;
+    width: 80%;
+    font-family: georgia;
   }
-
+  
   .job img {
     margin: 0 10px;
     width: 30%;
