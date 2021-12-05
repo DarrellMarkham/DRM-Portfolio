@@ -67,15 +67,29 @@ header nav .navbar-left {
   width: 100%;
 }
 
+header nav .navbar-left ul{
+  display: flex;
+  flex-direction: column;
+}
+
 header nav .navbar-left ul li {
   display: flex;
   flex-direction: column;
 }
 
 header nav .navbar-left ul li a {
-  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 20px;
   color: var(--primary-color);
   text-decoration: none;
+}
+
+header nav .navbar-left ul li a:hover {
+  font-style: italic;
+  padding: 0;
+  color: var(--hover-color);
+  text-shadow: none;
+  font-size: 25px;
 }
 
 header nav .navbar-middle {
@@ -105,19 +119,25 @@ header nav .navbar-right ul {
   flex-direction: row;
   align-items: center;
 }
+header nav .navbar-right ul li {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
 
 header nav .navbar-right ul li a {
-  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 20px;
   color: var(--primary-color);
   text-decoration: none;
 }
 
-header nav ul li a:hover {
-  padding: 0 10px;
+header nav .navbar-right ul li a:hover {
   font-style: italic;
+  padding: 0;
   color: var(--hover-color);
   text-shadow: none;
-  font-size: 1.3vw;
+  font-size: 25px;
 }
 /* HEADER AND NAVIGATION BAR STYLES END */
 
@@ -177,6 +197,10 @@ header nav ul li a:hover {
   position: sticky;
   top: 0;
   }
+
+.link {
+  padding: 5px;
+}
   
 .home a {
   font-weight: bold;
@@ -240,9 +264,17 @@ header nav ul li a:hover {
   border-color: var(--primary-color);
 }
 
-.job h3 {
-  font-size: 26px;
-  align-self: center;
+.job p {
+  line-height: 1.2;
+  color: var(--secondary-color);
+  font-size: 20px;
+  text-align: justify;
+}
+.job a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  color: var(--secondary-color);
 }
 
 .job img {
@@ -251,17 +283,26 @@ header nav ul li a:hover {
   align-self: center;
 }
 
-.job p {
-  line-height: 1.2;
-    color: var(--secondary-color);
-    font-size: 20px;
-    text-align: justify;
-    align-self: center;
+.job h3 {
+  text-decoration: none;
+  font-size: 26px;
+  display: block;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.job h3:hover {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  color: var(--secondary-color);
 }
 
 .job:first-child {
   flex: 1 1 80%;
   flex-direction: row;
+  display: block;
+  text-align: center;
 }
 /* PORTFOLIO SECTION END */
 
@@ -294,7 +335,7 @@ footer a {
 /* CONTACT ME STYLES START */
 .contact {
   background: var(--secondary-color);
-  padding-bottom: 20px;
+  padding: 150px;
 }
 
 .contact-info {
@@ -316,7 +357,7 @@ footer a {
 .contact-info p {
   margin-bottom: 30px;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
   text-align: center;
   color: var(--primary-color);
@@ -355,7 +396,13 @@ footer a {
   }
 
   header nav ul li a {
-    font-size: 20px;
+    font-size: 5px;
+  }
+
+  header nav ul li a:hover {
+    padding: 0 10px;
+    font-style: italic;
+    color: var(--hover-color);
   }
 
   footer h2, footer div {
@@ -372,28 +419,16 @@ footer a {
     height: auto;
   }
   
-  .home a {
-    font-weight: bold;
-    font-size: 20px;
-    color: var(--home-color);
-    text-decoration: none;
+   .job:first-child {
+    flex: 1 1 80%;
+    display: block;
+    flex-direction: row;
+    text-align: center;
   }
   
-  .home a:hover {
-    font-style: italic;
-    color: var(--home-color);
-    text-shadow: none;
-    font-size: 25px;  
-  }
-
-  .job:first-child {
-    flex: 1 1 60%;
-    flex-direction: column;
-  }
-
   .job h3 {
-  font-size: 26px;
-  width: 25%;
+    font-size: 26px;
+    text-align: center;
   }
 
   .job img {
@@ -402,12 +437,8 @@ footer a {
   }
 
   .job p {
-    line-height: 1.2;
-    color: var(--secondary-color);
-    font-size: 16px;
-    text-align: justify;
-    align-self: center;
-  }
+    font-size: 18px;
+    }
 }
 
 /* MEDIA QUERY FOR TABLETS */
@@ -416,6 +447,10 @@ footer a {
     padding: 10px 10px;
   }
 
+  .section-title {
+    font-size: 40px;
+}
+  
   .bio {
     padding: 10px 25px 25px;
     background-color: #f4ede4;  
@@ -436,17 +471,16 @@ footer a {
     padding: 20px 50px;
     background-color: #EDE1D3;
   }
-
-  .section-title {
-    font-size: 40px;
+  .job h3 {
+    font-size: 26px;
+    align-self: center;
+    text-decoration: none;
+    display: block;
+    text-align: center;
     color: var(--secondary-color);
-    text-align: left;
-    margin: auto auto auto 50px;
-    width: 80%;
-    font-family: georgia;
   }
-  
-  .job img {
+
+   .job img {
     margin: 0 10px;
     width: 30%;
   }
@@ -454,18 +488,34 @@ footer a {
   
 /* MEDIA QUERY FOR MOBILE PHONES */
 @media screen and (max-width: 575px) {
+  .section-title {
+    font-size: 28px;
+  }
+
+  .bio {
+    padding: 10px 15px 15px;
+    background-color: #f4ede4;
+  }
+
+  .jobs-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 10px;
+    background-color: #EDE1D3;
+  }
+  
   .job p {
     line-height: 1;
-      color: var(--secondary-color);
-      width: 50%;
-      margin: 30px 0 10px 0;
-      font-size: 15px;
-      text-align: justify;
-   }
+    margin: 30px 0 10px 0;
+  }
   
   .job h3 {
-    font-size: 20px;
-    width: 25%;
+    font-size: 26px;
+    align-self: center;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: var(--secondary-color);
   }
 
    .job img {
