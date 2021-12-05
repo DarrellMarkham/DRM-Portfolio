@@ -16,9 +16,32 @@ body {
   font-family: Helvetica, Arial, sans-serif, Georgia, Times;
 }
 
+/* SECTION STYLES START */
+section {
+  padding: 0 100px;
+}
+
+.section-title {
+  font-size: 48px;
+  color: var(--secondary-color);
+  text-align: left;
+  margin: auto auto auto 50px;
+  width: 80%;
+  font-family: georgia;
+}
+
+.primary-border {
+  border-color: var(--primary-color);
+}
+
+.secondary-border {
+  border-color: var(--secondary-color);
+}
+/* SECTION TITLE STYLES END */
+
 /* HEADER AND NAVIGATION BAR STYLES START */
 header {
-  padding: 20px 50px;
+  padding: 20px 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,38 +113,13 @@ header nav .navbar-right ul li a {
 }
 
 header nav ul li a:hover {
+  padding: 0 10px;
   font-style: italic;
   color: var(--hover-color);
   text-shadow: none;
   font-size: 1.3vw;
 }
 /* HEADER AND NAVIGATION BAR STYLES END */
-
-/* FOOTER STYLES START */
-footer {
-  background: var(--primary-color);
-  padding: 40px 50px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-footer h2 {
-  color: var(--secondary-color);
-  font-size: 30px;
-  margin: 0;
-}
-
-footer div {
-  line-height: 1.5;
-  text-align: right;
-}
-
-footer a {
-  color: var(--secondary-color);
-}
-/* FOOTER STYLES END */
 
 /* HERO SECTION START */
 .hero {
@@ -174,18 +172,12 @@ footer a {
 /* HERO SECTION END */
 
 /* HOME SECTION START */
-section {
-  padding: 50px;
-}
-
 .home {
-  padding-bottom: 10px;
-  padding-top: 20px; 
-  position: sticky;
-  top: 0px;
   background-color: #f4ede4;
+  position: sticky;
+  top: 0;
   }
-
+  
 .home a {
   font-weight: bold;
   font-size: 20px;
@@ -195,35 +187,17 @@ section {
 
 .home a:hover {
   font-style: italic;
+  padding: 0;
   color: var(--home-color);
   text-shadow: none;
   font-size: 25px;
 }
 /* HOME SECTION END */
 
-/* SECTION TITLE STYLES START */
-.section-title {
-  font-size: 48px;
-  color: var(--secondary-color);
-  text-align: left;
-  margin: auto auto auto 50px;
-  width: 80%;
-  font-family: georgia;
-}
-
-.primary-border {
-  border-color: var(--primary-color);
-}
-
-.secondary-border {
-  border-color: var(--secondary-color);
-}
-/* SECTION TITLE STYLES END */
-
 /* BIO SECTION START */
 .bio {
-  background-color: #f4ede4;
-  padding-bottom: 200px;
+  padding: 20px 150px;
+  background-color: #f4ede4;  
   }
 
 .bio p {
@@ -237,20 +211,17 @@ section {
 /* BIO SECTION  END */
 
 /* PORTFOLIO SECTION START */
-.jobs {
-  background-color: #ede1d3;
-}
-
 .flex-row {
   display: flex;
-  margin: 15px 50px;
+  margin: 15px 0;
+  flex-direction: column;
 }
 
-.container {
+.job-container {
   display: flex;  
   flex-wrap: wrap;
-  padding: 2% 8%;
-  
+  padding: 20px 150px;
+  background-color: #EDE1D3;
 }
 
 .job {
@@ -287,6 +258,32 @@ section {
   flex-direction: row;
 }
 /* PORTFOLIO SECTION END */
+
+/* FOOTER STYLES START */
+footer {
+  background: var(--primary-color);
+  padding: 40px 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+footer h2 {
+  color: var(--secondary-color);
+  font-size: 30px;
+  margin: 0;
+}
+
+footer div {
+  line-height: 1.5;
+  text-align: right;
+}
+
+footer a {
+  color: var(--secondary-color);
+}
+/* FOOTER STYLES END */
 
 /* CONTACT ME STYLES START */
 .contact {
@@ -331,9 +328,6 @@ section {
   color: var(--hover-color);S
 }
 /* CONTACT ME STYLES END */
-
-/* UTILITIES */
-
 
 /* MEDIA QUERY FOR SMALL SCREENS */ 
 @media screen and max-width: 980px; {
