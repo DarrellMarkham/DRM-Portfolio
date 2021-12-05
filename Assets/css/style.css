@@ -18,7 +18,7 @@ body {
 
 /* SECTION STYLES START */
 section {
-  padding: 0 100px;
+  padding: 0 50px;
 }
 
 .section-title {
@@ -41,7 +41,7 @@ section {
 
 /* HEADER AND NAVIGATION BAR STYLES START */
 header {
-  padding: 20px 100px;
+  padding: 20px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -135,7 +135,7 @@ header nav ul li a:hover {
 
 .hero-container {
   display: flex;
-  height: 550px;
+  height: 600px;
   width: 100%;
 }
 
@@ -196,21 +196,28 @@ header nav ul li a:hover {
 
 /* BIO SECTION START */
 .bio {
-  padding: 20px 150px;
+  padding: 20px 100px 100px;
   background-color: #f4ede4;  
   }
 
 .bio p {
-  line-height: 1.7;
+  line-height: 1.4;
   color: var(--secondary-color);
   width: 80%;
-  margin: 35px auto;
+  margin: 10px auto;
   font-size: 20px;
   text-align: justify;
 }
 /* BIO SECTION  END */
 
 /* PORTFOLIO SECTION START */
+.jobs-container {
+  display: flex;  
+  flex-wrap: wrap;
+  padding: 20px 100px;
+  background-color: #EDE1D3;
+}
+
 .flex-row {
   display: flex;
   margin: 15px 0;
@@ -220,7 +227,7 @@ header nav ul li a:hover {
 .job-container {
   display: flex;  
   flex-wrap: wrap;
-  padding: 20px 150px;
+  padding: 20px;
   background-color: #EDE1D3;
 }
 
@@ -239,15 +246,14 @@ header nav ul li a:hover {
 }
 
 .job img {
-  margin: 0 40px;
-  width: 50%;
+  margin: 0 20px;
+  width: 30%;
   align-self: center;
 }
 
 .job p {
   line-height: 1.2;
     color: var(--secondary-color);
-    width: 50%;
     font-size: 20px;
     text-align: justify;
     align-self: center;
